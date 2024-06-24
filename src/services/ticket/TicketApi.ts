@@ -7,7 +7,7 @@ export class TicketApi extends BaseRequest {
     }
 
     public async create(ticket: TicketDto) {
-        await this._req.post('/login', ticket);
+        await this._req.post('/create', ticket);
     }
 
     public async find(id: number): Promise<TicketResponseDto> {

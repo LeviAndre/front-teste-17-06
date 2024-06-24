@@ -4,9 +4,11 @@ export interface TicketResponseDto {
     description: string,
     statusId: number,
     userId: number,
+    createdAt: Date;
+    updatedAt: Date;
 }
 
 export interface TicketDto {
     title: string,
-    descritpion: string,
+    description: string,
 }

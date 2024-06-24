@@ -23,7 +23,7 @@ const RegisterPage = () => {
         try {
             setIsLoading(true);
 
-            const response = await _api.register({
+            await _api.register({
                 firstName: values.firstName,
                 lastName: values.lastName,
                 email: values.email!,
@@ -35,10 +35,7 @@ const RegisterPage = () => {
                 content: 'Registration successful!',
             });
 
-            // Timeout só pra curtir o momento s2
-            setTimeout(() => {
-                _navigate('/auth');
-            }, 3000);
+            _navigate('/auth')
         } catch (ex: any) {
             const errorResponse = ex.response.data;
 
